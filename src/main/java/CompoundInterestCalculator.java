@@ -20,7 +20,9 @@ public class CompoundInterestCalculator {
 
         double n_times_t = n * t;
 
+        //Calculating total interest
         double amount = p * Math.pow((1 + r_over_n), n_times_t);
+        //Formatting the amount to 2 decimal places
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
         double total_Amount = Double.parseDouble(decimalFormat.format(amount));
 
