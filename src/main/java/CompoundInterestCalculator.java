@@ -4,14 +4,17 @@ import java.util.Map;
 
 public class CompoundInterestCalculator {
 
+    //Total Amount = P*(1+(rate/n)^(t*n)
     public static void main(String[] args) {
         double p = 10000;
         double r = 15;
         double t = 10;
         String cf = "semi-annually";
 
+        //Converting rate into decimal
         r /= 100;
-        //double n = (getN(cf));
+        
+        //getting n based on the frequency of the interest that is compounded
         double n = getN_Value(cf);
         double r_over_n = r / n;
 
@@ -27,6 +30,7 @@ public class CompoundInterestCalculator {
     }
 
     public static double getN_Value(String frequency) {
+        //creating a map to store the value of frequency 
         Map<String, Integer> freq_map = new LinkedHashMap<String, Integer>();
         freq_map.put("yearly", 1);
         freq_map.put("semi-annually", 2);
