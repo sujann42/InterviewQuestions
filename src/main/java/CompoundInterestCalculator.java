@@ -1,4 +1,5 @@
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -10,6 +11,7 @@ public class CompoundInterestCalculator {
         double r = 15;
         double t = 10;
         String cf = "semi-annually";
+        //NumberFormat numberFormat = new NumberFormat.getInstance();
 
         //Converting rate into decimal
         r /= 100;
@@ -26,6 +28,7 @@ public class CompoundInterestCalculator {
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
         double total_Amount = Double.parseDouble(decimalFormat.format(amount));
 
+        //Print all values by formatting them
         System.out.printf("Principal: %8.2f\n", p);
         System.out.printf("Interest : %8.2f\n", total_Amount - p);
         System.out.printf("Total    : %8.2f", total_Amount);
@@ -41,7 +44,7 @@ public class CompoundInterestCalculator {
         freq_map.put("monthly", 12);
         freq_map.put("weekly", 52);
         freq_map.put("daily", 365);
-
+        //return frequency value
         return freq_map.get(frequency);
     }
 }
