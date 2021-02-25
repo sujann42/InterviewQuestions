@@ -7,6 +7,7 @@ public class CompoundInterestCalculator {
 
     //Total Amount = P*(1+(rate/n)^(t*n)
     public static void main(String[] args) {
+        //Gets double values
         double p = 10000;
         double r = 15;
         double t = 10;

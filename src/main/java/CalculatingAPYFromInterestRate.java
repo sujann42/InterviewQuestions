@@ -7,6 +7,7 @@ public class CalculatingAPYFromInterestRate {
         System.out.println(calculateAPY("4"));
     }
     public static String calculateAPY(String rate){
+        //This will return 0
         if(rate.equals("0")){
             return "ZERO";
         }
