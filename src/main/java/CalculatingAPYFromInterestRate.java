@@ -8,6 +8,7 @@ public class CalculatingAPYFromInterestRate {
     }
     public static String calculateAPY(String rate){
         //This will return 0
+        //This will return 0 if no rate is provided.
         if(rate.equals("0")){
             return "ZERO";
         }
